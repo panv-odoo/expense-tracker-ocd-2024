@@ -69,7 +69,6 @@ export const timerField = {
             label: _t("Time interval"),
             name: "interval",
             type: "number",
-            default: 5,
             help: _t(
                 `Control the number of seconds in the time selection. E.g. set it to 15 to work in quarters.`
             ),
