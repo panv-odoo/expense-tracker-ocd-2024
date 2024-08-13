@@ -15,12 +15,10 @@ export class TimerField extends Component {
         ...standardFieldProps,
         noSeconds: { type: Boolean, optional: true },
         displayDays: { type: Boolean, optional: true },
-        interval: { type: Number, optional: true },
     };
     static defaultProps = {
         noSeconds: false,
         displayDays: false,
-        interval: 1,
     };
 
     setup() {
@@ -65,20 +63,11 @@ export const timerField = {
             name: "display_days",
             type: "boolean",
         },
-        {
-            label: _t("Time interval"),
-            name: "interval",
-            type: "number",
-            help: _t(
-                `Control the number of seconds in the time selection. E.g. set it to 15 to work in quarters.`
-            ),
-        },
     ],
     supportedTypes: ["datetime"],
     extractProps: ({ attrs, options }) => ({
         noSeconds: options.no_seconds,
         displayDays: options.display_days,
-        interval: options.interval,
     }),
 }
 
